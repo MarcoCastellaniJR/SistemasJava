@@ -2,7 +2,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
-public class TelaPrincipal {
+public class TelaCadastroGeral {
 
 	private JFrame frame;
 
@@ -13,7 +13,7 @@ public class TelaPrincipal {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaPrincipal window = new TelaPrincipal();
+					TelaCadastroGeral window = new TelaCadastroGeral();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -25,7 +25,7 @@ public class TelaPrincipal {
 	/**
 	 * Create the application.
 	 */
-	public TelaPrincipal() {
+	public TelaCadastroGeral() {
 		initialize();
 	}
 
@@ -34,7 +34,7 @@ public class TelaPrincipal {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 800, 400);
+		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
