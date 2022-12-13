@@ -24,15 +24,15 @@ public class TelaCadastroGeral {
 	private JTextField txtRenda;
 	private JTextField txtTelefone;
 	private JTextField txtPesquisa;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JTextField textField_6;
-	private JTextField textField_7;
-	private JTextField textField_8;
-	private JTextField textField_9;
+	private JTextField txtIdPesquisa;
+	private JTextField txtNomeAtt;
+	private JTextField txtSobrenomeAtt;
+	private JTextField txtCPFAtt;
+	private JTextField txtBairroAtt;
+	private JTextField txtRendaAtt;
+	private JTextField txtRuaAtt;
+	private JTextField txtNumeroAtt;
+	private JTextField txtTelefoneAtt;
 
 	/**
 	 * Launch the application.
@@ -197,10 +197,10 @@ public class TelaCadastroGeral {
 		lblNewLabel_9.setBounds(10, 10, 67, 13);
 		AbaAlteracao.add(lblNewLabel_9);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(87, 7, 96, 19);
-		AbaAlteracao.add(textField_1);
-		textField_1.setColumns(10);
+		txtIdPesquisa = new JTextField();
+		txtIdPesquisa.setBounds(87, 7, 96, 19);
+		AbaAlteracao.add(txtIdPesquisa);
+		txtIdPesquisa.setColumns(10);
 		
 		JButton btnPesquisa = new JButton("Pesquisa");
 		btnPesquisa.setBounds(193, 6, 85, 21);
@@ -214,28 +214,28 @@ public class TelaCadastroGeral {
 		lblNewLabel_10.setBounds(10, 40, 45, 13);
 		AbaAlteracao.add(lblNewLabel_10);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(87, 40, 200, 19);
-		AbaAlteracao.add(textField_2);
-		textField_2.setColumns(10);
+		txtNomeAtt = new JTextField();
+		txtNomeAtt.setBounds(87, 40, 200, 19);
+		AbaAlteracao.add(txtNomeAtt);
+		txtNomeAtt.setColumns(10);
 		
 		JLabel lblNewLabel_11 = new JLabel("Sobrenome");
 		lblNewLabel_11.setBounds(300, 40, 55, 13);
 		AbaAlteracao.add(lblNewLabel_11);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(370, 37, 200, 19);
-		AbaAlteracao.add(textField_3);
-		textField_3.setColumns(10);
+		txtSobrenomeAtt = new JTextField();
+		txtSobrenomeAtt.setBounds(370, 37, 200, 19);
+		AbaAlteracao.add(txtSobrenomeAtt);
+		txtSobrenomeAtt.setColumns(10);
 		
 		JLabel lblNewLabel_12 = new JLabel("CPF");
 		lblNewLabel_12.setBounds(10, 70, 45, 13);
 		AbaAlteracao.add(lblNewLabel_12);
 		
-		textField_4 = new JTextField();
-		textField_4.setBounds(87, 67, 200, 19);
-		AbaAlteracao.add(textField_4);
-		textField_4.setColumns(10);
+		txtCPFAtt = new JTextField();
+		txtCPFAtt.setBounds(87, 67, 200, 19);
+		AbaAlteracao.add(txtCPFAtt);
+		txtCPFAtt.setColumns(10);
 		
 		JLabel lblNewLabel_13 = new JLabel("Rua");
 		lblNewLabel_13.setBounds(300, 70, 45, 13);
@@ -257,30 +257,30 @@ public class TelaCadastroGeral {
 		lblNewLabel_17.setBounds(300, 130, 45, 13);
 		AbaAlteracao.add(lblNewLabel_17);
 		
-		textField_5 = new JTextField();
-		textField_5.setBounds(87, 97, 200, 19);
-		AbaAlteracao.add(textField_5);
-		textField_5.setColumns(10);
+		txtBairroAtt = new JTextField();
+		txtBairroAtt.setBounds(87, 97, 200, 19);
+		AbaAlteracao.add(txtBairroAtt);
+		txtBairroAtt.setColumns(10);
 		
-		textField_6 = new JTextField();
-		textField_6.setBounds(87, 127, 200, 19);
-		AbaAlteracao.add(textField_6);
-		textField_6.setColumns(10);
+		txtRendaAtt = new JTextField();
+		txtRendaAtt.setBounds(87, 127, 200, 19);
+		AbaAlteracao.add(txtRendaAtt);
+		txtRendaAtt.setColumns(10);
 		
-		textField_7 = new JTextField();
-		textField_7.setBounds(370, 67, 200, 19);
-		AbaAlteracao.add(textField_7);
-		textField_7.setColumns(10);
+		txtRuaAtt = new JTextField();
+		txtRuaAtt.setBounds(370, 67, 200, 19);
+		AbaAlteracao.add(txtRuaAtt);
+		txtRuaAtt.setColumns(10);
 		
-		textField_8 = new JTextField();
-		textField_8.setBounds(370, 97, 200, 19);
-		AbaAlteracao.add(textField_8);
-		textField_8.setColumns(10);
+		txtNumeroAtt = new JTextField();
+		txtNumeroAtt.setBounds(370, 97, 200, 19);
+		AbaAlteracao.add(txtNumeroAtt);
+		txtNumeroAtt.setColumns(10);
 		
-		textField_9 = new JTextField();
-		textField_9.setBounds(370, 127, 200, 19);
-		AbaAlteracao.add(textField_9);
-		textField_9.setColumns(10);
+		txtTelefoneAtt = new JTextField();
+		txtTelefoneAtt.setBounds(370, 127, 200, 19);
+		AbaAlteracao.add(txtTelefoneAtt);
+		txtTelefoneAtt.setColumns(10);
 		
 		JButton btnDeletaCadastro = new JButton("Deleta Cadastro");
 		btnDeletaCadastro.setBounds(170, 261, 150, 21);
