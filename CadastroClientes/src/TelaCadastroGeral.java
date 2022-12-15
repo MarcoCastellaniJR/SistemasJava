@@ -10,6 +10,10 @@ import javax.swing.JTextArea;
 import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JRadioButton;
+import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.awt.event.ActionEvent;
 
 public class TelaCadastroGeral {
 
@@ -79,7 +83,7 @@ public class TelaCadastroGeral {
 		btnResumoGeral.setBounds(10, 10, 120, 21);
 		AbaVisualizar.add(btnResumoGeral);
 		
-		JButton btnPesquisaNome = new JButton("Pesquisa por Nome");
+		JButton btnPesquisaNome = new JButton("ByNome");
 		btnPesquisaNome.setBounds(140, 10, 120, 21);
 		AbaVisualizar.add(btnPesquisaNome);
 		
@@ -93,7 +97,7 @@ public class TelaCadastroGeral {
 		AbaVisualizar.add(txtPesquisa);
 		txtPesquisa.setColumns(10);
 		
-		JButton btnPesquisaCPF = new JButton("Pesquisa por CPF");
+		JButton btnPesquisaCPF = new JButton("ByCPF");
 		btnPesquisaCPF.setBounds(270, 10, 120, 21);
 		AbaVisualizar.add(btnPesquisaCPF);
 		
@@ -188,6 +192,30 @@ public class TelaCadastroGeral {
 		txtTelefone.setBounds(120, 247, 222, 19);
 		AbaCadastro.add(txtTelefone);
 		txtTelefone.setColumns(10);
+		
+		JButton btnCadastro = new JButton("CADASTRO");
+		btnCadastro.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ConnectionFactory conne = new ConnectionFactory();
+				String stm = "INSERT INTO dbcadastrogeral ";
+				conne.insertDB(null);//criar conexão, mandar o statement e fechar conexão
+				conne.desconectDB();
+				
+				
+				/*InsertDB insert = new InsertDB();
+				try {
+					insert.insertDB();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}*/
+				
+				ConnectionFactory conecta = new ConnectionFactory();
+				conecta.conectaDB();
+			}
+		});
+		btnCadastro.setBounds(476, 244, 117, 25);
+		AbaCadastro.add(btnCadastro);
 		
 		JPanel AbaAlteracao = new JPanel();
 		tabbedPane.addTab("Alteração", null, AbaAlteracao, null);
