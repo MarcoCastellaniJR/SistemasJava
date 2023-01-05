@@ -132,12 +132,38 @@ InputStreamReader = Esse Construtor sabe ser uma String;
         
         
 --------------------------------------- AULA - File Writer e PrintStream -------------------------------------------------------------   
+
+
+            BufferedWriter bw = new BufferedWriter(new FileWriter("lorem2.txt"));
+            PrintStream ps = new PrintStream(new File("lorem2.txt"));
+            PrintWriter ps = new PrintWriter("lorem2.txt");        
+          Todos os métodos que estão descritos acima tem a mesma função, começando em uma ordem cronológica d cima p baixo, 
+          o Java foi se atualizando e tentando gerar essa melhora no código.
+          
+         Sempre se atentar ao método que vai usar e o que você vai pedir para ele fazer, todos os métodos acima tem mais de um construtor
+         ele pode ter um que crie um arquivo novo, um que escreva em um arquivo existente, que pede uma String com o nome do arquivo
+         entre outras formas de se utilizar.
+         
+
+
+
+_Negrito_--------------------------------------- AULA - Scanner --------------------------------------------------------------------------------   
+Scanner de arquivos - 
+                SCV - Separete Coma Values - Valores separados por virgulas
+                
+                public static void main(String[] args) throws FileNotFoundException {
+
+                Scanner scanner = new Scanner(new File("contas.csv"));
+                while(scanner.hasNextLine()) {
+                        String linha = scanner.nextLine();
+                        System.out.println(linha);
+                }
+
+                scanner.close();
+    
+                Nesse código da para notar que o Scanner é criado e ele precisa de um new File, com o arquivo que você quer usar
+                o hasNextLine é um metodo que testa se tem uma pŕoxima linha e gera o laço para fazer o print
         
-
-
-
-
-
 
 
 
