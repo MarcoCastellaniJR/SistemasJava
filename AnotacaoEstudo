@@ -1,0 +1,74 @@
+Streams - Readers - Writers - Java 
+Java IO - I de Input e O de Output
+
+
+--------------------------------------- AULA 01 - ENTENDENDO O BACK PARA DEPOIS SIMPLIFICAR -------------------------------------------------------------
+
+- Entrada e Saida de dados sempre vão ser o foco de uma aplicação, mas não precisa ser dados recebidos de um usuários direto
+mas sim os dados de um site, que passam uma requisição e depois eles vaão para o navegador, dados que são tratados ou não tratados
+
+Arquivo                                                   Arquivo
+Rede     ==>> Aplicação                           ==>>    Redde
+Teclado       * Aplicação Web,Desktop ou mobile           Teclado
+
+File Input Stream = Temos o construtor recebendo um ( File file ) o java entende o que é o Arquivo já
+mas nesse caso se faz o teste pelo construtor de String, onde dentro dele ele explica que o String 
+pede o Caminho do arquivo.
+IO = Cheio de Exception d tipo Checked;
+
+o construtor de .read do FileInputStream
+InputStreamReader = Esse Construtor sabe ser uma String;
+
+                FileInputStream fis = new FileInputStream("lorem.txt");
+                InputStreamReader isr = new InputStreamReader(fis);
+                
+                Nesse caso usamos o FileInputStream para ler/Puxar o arqivo para dentro da aplicação
+                E logo depois pegamos o InputStreamReader , mas essa classe ainda não faz a leitura da forma correta,
+                ela faz um teste e retorna quantos caracteres ela conseguiu transformar em texto, ainda não é a classe desejada também
+                
+                BufferedReader br = new BufferedReader();
+                
+                Esse construtor foi feito para ler linha a linha;   
+                
+                
+                --------------------------------------------""--------------------------------------
+                FileInputStream fis = new FileInputStream("lorem.txt");
+                InputStreamReader isr = new InputStreamReader(fis);
+                BufferedReader br = new BufferedReader(isr);
+
+                String linha = br.readLine();
+
+                System.out.println(linha);
+
+                br.close();
+                
+                Nesse caso você cria a string da linha e imprime ela direto, depois da entrada você precisa encerrar a leitura
+                da Mesma forma que é feita a conexão de DataBase;;
+                
+                
+--------------------------------------- AULA 02 - ENTENDENDO AS CLASSES READER E STREAM -------------------------------------------------------------
+               Esse caso de um arquivo precisar passar primeiro pelo 
+               FileInputStream
+               InputStreamReader
+               BufferedReader
+               é PArte de um padrão de projetos , Chamado Decorator
+               Ele recebe um dado, realiza uma parte do processo e passa pra outro, cada um ''decora'' sua parte
+               
+               
+               ------
+               
+               Stream = input stream of bytes 
+               Reader = reading character streams
+               
+               
+                FileInputStream fis = new FileInputStream("lorem.txt");           Recebe e entend, é melhor para binários
+                Pode ser escrito sem o File -  InputStream fis = new FileInputStream("lorem.txt"); - Pois é sua classe mais genérica
+                InputStreamReader isr = new InputStreamReader(fis);               Recebe, Lê e escreve arquivos em String  
+                Pode ser escrito sem o InputStream - Reader isr = new InputStreamReader(fis); - pois Reader é sua classe mais genérica
+                BufferedReader br = new BufferedReader(isr);
+                
+                
+--------------------------------------- AULA 03 - ENTENDENDO O BACK PARA DEPOIS SIMPLIFICAR -------------------------------------------------------------                
+               
+                
+                
