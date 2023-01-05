@@ -147,7 +147,8 @@ InputStreamReader = Esse Construtor sabe ser uma String;
 
 
 
-_Negrito_--------------------------------------- AULA - Scanner --------------------------------------------------------------------------------   
+--------------------------------------- AULA - Scanner --------------------------------------------------------------------------------   
+
 Scanner de arquivos - 
                 SCV - Separete Coma Values - Valores separados por virgulas
                 
@@ -164,6 +165,62 @@ Scanner de arquivos -
                 Nesse código da para notar que o Scanner é criado e ele precisa de um new File, com o arquivo que você quer usar
                 o hasNextLine é um metodo que testa se tem uma pŕoxima linha e gera o laço para fazer o print
         
+--------------------------------------- AULA - Scanner - COMO TRATAR OS VALORES --------------------------------------------------------------------   
+
+Para a separação dos valores temos um método que se chama .split(); no qual dentro você coloca o que vai usar como separador, em CSV (",");
+
+Scanner scanner = new Scanner(new File("contas.csv"));
+                while(scanner.hasNextLine()) {
+                        String linha = scanner.nextLine();
+                        System.out.println(linha);
+
+                        Scanner linhaScanner = new Scanner(linha);
+                        linhaScanner.useLocale(Locale);
+                        linhaScanner.useDelimiter(",");
+
+                        String valor1 = linhaScanner.next();
+                        int valor2 = linhaScanner.nextInt();
+                        int valor3 = linhaScanner.nextInt();
+                        String valor4 = linhaScanner.next();
+                        double valor5 = linhaScanner.nextDouble();
+
+                        System.out.println(valor1 + valor2 + valor3 + valor4 + valor5);
+
+                        linhaScanner.close();
+                        
+                        
+                        dentro do laço de while temos o tratamento separando pela , 
+                        (",") ,  e depois o useLocale separa as regras internacionais,
+                        caso tenha alterações de local 
+                        e quando se fala do sysout, ele ja é a parte de formatação, 
+                        logo fica mais a critério do sistema
+                        
+--------------------------------------- AULA - FORMATAÇÃO DOS VALORES  --------------------------------------------------------------------   
+                        
+                        
+      public static void main(String[] args) throws Exception {
+
+                Scanner scanner = new Scanner(new File("contas.csv"));
+                while(scanner.hasNextLine()) {
+                        String linha = scanner.nextLine();
+//                        System.out.println(linha);
+
+                        Scanner linhaScanner = new Scanner(linha);
+                        linhaScanner.useLocale(Locale.US);
+                        linhaScanner.useDelimiter(",");
+
+                        String tipoConta = linhaScanner.next();
+                        int agencia = linhaScanner.nextInt();
+                        int numero = linhaScanner.nextInt();
+                        String titular = linhaScanner.next();
+                        double saldo = linhaScanner.nextDouble();
+
+                        String valorFormatado = String.format("%s - %04d-%08d, %20s: %05.2f", tipoConta, agencia, numero, titular, saldo);
+                                                System.out.println(valorFormatado);
+
+                        linhaScanner.close();
+                        
+                        
 
 
 
